@@ -154,3 +154,10 @@
     }
   }
 }
+@media (max-width: 320px) {
+  .banner {
+    &__heading span img {
+      left: 0;
+    }
+  }
+}
