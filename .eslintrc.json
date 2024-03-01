@@ -57,7 +57,7 @@
     "react/jsx-curly-newline": "warn",
     "react/state-in-constructor": "warn",
     "react/static-property-placement": "warn",
-    "react/jsx-props-no-spreading": ["warn", { "exceptions": ["Component"] }],
+    "react/jsx-props-no-spreading": ["off", { "exceptions": ["Component"] }],
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
     "react/no-array-index-key": "error",
