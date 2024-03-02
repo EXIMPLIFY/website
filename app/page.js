@@ -5,11 +5,11 @@ import Home from '../src/homepage';
 
 register();
 
-const Page = () => {
+const HomePage = () => {
   return (
     <div className='my-container'>
       <Home />
     </div>
   );
 };
-export default Page;
+export default HomePage;

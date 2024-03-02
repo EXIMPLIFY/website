@@ -1,0 +1,140 @@
+.banner {
+  margin-top: 10rem;
+  &__label-wrapper {
+    margin-bottom: 4rem;
+  }
+  &__group {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 3.2rem;
+    font-size: 6rem;
+    font-family: 'Lufga700';
+    color: var(--c-050729);
+    span {
+      position: relative;
+      white-space: nowrap;
+      color: var(--c-5313CA);
+    }
+  }
+  &__description {
+    margin-bottom: 6rem;
+    width: 100%;
+    max-width: 72%;
+  }
+  &__group-right {
+    text-align: right;
+  }
+  &__banner-img {
+    margin-left: auto;
+  }
+  &__down-arrow {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1194px) {
+  .banner {
+    &__banner-img {
+      width: 35rem;
+    }
+    &__heading {
+      font-size: 5rem;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .banner {
+    &__group {
+      padding-left: 0;
+      padding-right: 0;
+      row-gap: 4rem;
+      grid-template-columns: 1fr;
+    }
+    &__group-left {
+      text-align: center;
+      order: 2;
+    }
+    &__description {
+      max-width: 100%;
+    }
+    &__banner-img {
+      margin-right: auto;
+      width: 70%;
+    }
+    &__group-right {
+      text-align: center;
+      order: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    &__group {
+      margin-bottom: 1.2rem;
+    }
+    &__collabration {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    &__company-log {
+      min-width: 12rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .banner {
+    margin-top: 6rem;
+    &__group {
+      row-gap: 6rem;
+    }
+    &__label-wrapper {
+      margin-bottom: 2.4rem;
+    }
+    &__heading {
+      margin-bottom: 1.8rem;
+      font-size: 3.8rem;
+      span {
+        white-space: normal;
+        img {
+          left: 5rem;
+          bottom: 0.35rem;
+        }
+      }
+    }
+    &__description {
+      margin-bottom: 0;
+    }
+    &__btn--transparent {
+      margin-right: 0;
+      margin-bottom: 1.2rem;
+    }
+    &__banner-img {
+      width: 90%;
+    }
+    &__btn-arrow--filled {
+      width: 100%;
+    }
+    &__down-arrow {
+      width: 5.6rem;
+      height: 8rem;
+      object-fit: contain;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .banner {
+    &__heading span img {
+      left: 0;
+    }
+  }
+}
