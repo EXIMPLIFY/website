@@ -31,6 +31,14 @@ const Demo = () => {
     }
   ]);
 
+  const [hasWindow, setHasWindow] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setHasWindow(true);
+    }
+  }, []);
+
   const pausePlayingVideos = () => {
     setModalDemoVideos(
       modalDemoVideos.map(el => ({ ...el, isPlaying: false }))
@@ -205,15 +213,17 @@ const Demo = () => {
           >
             {modalDemoVideos.map(({ isPlaying, url }, index) => (
               <swiper-slide class='demo-video__slide' key={url}>
-                <ReactPlayer
-                  controls
-                  url={url}
-                  playing={isPlaying}
-                  width='100%'
-                  height='100%'
-                  onPlay={() => onDemoPlayOrPause(index, true)}
-                  onPause={() => onDemoPlayOrPause(index)}
-                />
+                {hasWindow && (
+                  <ReactPlayer
+                    controls
+                    url={url}
+                    playing={isPlaying}
+                    width='100%'
+                    height='100%'
+                    onPlay={() => onDemoPlayOrPause(index, true)}
+                    onPause={() => onDemoPlayOrPause(index)}
+                  />
+                )}
               </swiper-slide>
             ))}
           </swiper-container>
@@ -224,13 +234,19 @@ const Demo = () => {
             <span className='navigation navigation--right'>
               <RightArrowSvg />
             </span>
-            <Image src={demoClose} width={256} height={64} />
+            <Image
+              src={demoClose}
+              width={256}
+              height={64}
+              alt='modal close icon'
+            />
             <Image
               src={demoCloseCircle}
               width={24}
               height={24}
               className='demo-modal__close-icon'
               onClick={onModalClose}
+              alt='modal close icon'
             />
           </div>
         </div>
