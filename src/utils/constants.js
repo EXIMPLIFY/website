@@ -1,9 +1,9 @@
 const HSN_LOCATOR = 'hsnLocator';
 const PRODUCTS = 'products';
 
-const exportConstants = {
+const constants = {
   HSN_LOCATOR,
   PRODUCTS
 };
 
-export default exportConstants;
+export default constants;
