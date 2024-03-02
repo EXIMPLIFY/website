@@ -17,7 +17,6 @@ const Knowledge = () => {
       const params = {
         modules: [Pagination],
         spaceBetween: 15,
-        injectStylesUrls: ['swiper/modules/pagination.css'],
         pagination: {
           el: '.knowledge .pagination'
           //   type: 'progressbar'
