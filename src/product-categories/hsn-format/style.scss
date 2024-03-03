@@ -1,0 +1,39 @@
+.hsn-format{
+    margin-top: 17.9rem;
+    margin-bottom: 16.2rem;
+    text-align: center;
+    position: relative;
+    &__img{
+        max-width: 70rem;
+        width: 94%;
+    }
+    &__floating-left{
+        position: absolute;
+        bottom: 1.1rem;
+        font-family: 'Lufga700';
+        font-size: 6rem;
+        letter-spacing: 0.08em;
+        background: linear-gradient(180deg, #5313CA -251.92%, rgba(83, 19, 202, 0) 74.36%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (max-width: 834px){
+            display: none;
+        }
+    }
+    &__floating-right{
+        position: absolute;
+        right: -0.5rem;
+        writing-mode:vertical-rl;
+        font-family: 'Lufga700';
+        font-size: 6rem;
+        letter-spacing: 0.08em;
+        transform: rotate(-180deg) translateY(calc(100% + 15rem));
+        background: linear-gradient(-90deg, #5313CA -251.92%, rgba(83, 19, 202, 0) 74.36%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (max-width: 834px){
+            display: none;
+        }
+    }
+    
+}
