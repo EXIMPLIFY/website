@@ -62,8 +62,8 @@ const HsnResults = () => {
             left: offsetLeft || 0
           }}
         >
-          <span className='right_curve' />
           <span className='left_curve' />
+          <span className='right_curve' />
         </div>
       </div>
       <div className='hsn__input-wrapper'>
@@ -79,6 +79,27 @@ const HsnResults = () => {
           alt='Search'
           className='hsn__search-icon'
         />
+      </div>
+      <div className='hsn__results-container'>
+        <div className='hsn__results-header-wrapper'>
+          <span className='hsn__results-header'>Sr. No.</span>
+          <span className='hsn__results-header'>HSN Number</span>
+          <span className='hsn__results-header'>Description</span>
+          <span className='hsn__results-header'>Actions</span>
+        </div>
+        <div className='hsn__results-wrapper'>
+          <div className='hsn__result'>
+            <span className='hsn__result-item'>1</span>
+            <span className='hsn__result-item'>0910.30</span>
+            <span className='hsn__result-item'>
+              Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and
+              other spices.
+            </span>
+            <span className='hsn__result-item'>
+              <button type='button'>View Kundali</button>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
