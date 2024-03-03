@@ -100,7 +100,7 @@ const CategoryList = () => {
       {categories && categories.map((category, index) => {
         return (
           <>
-            <SectionLabel title={category.badgeLabel} />
+            <SectionLabel title={category.badgeLabel} className='bg-05072933' />
             <h1 className='category-list__section-title'>{category.sectionTitle}</h1>
 
             {category.itemList && category.itemList.map(item => {
