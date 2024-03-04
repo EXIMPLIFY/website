@@ -3,15 +3,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 24px;
+    padding: 0 2.4rem;
     &__bubble-section, 
     &__bubble-section{
         &-left, &-right{
-            margin: 0 54px;
-            padding: 0px 18px;
+            margin: 0 5.4rem;
+            padding: 0px 1.8rem;
             position: relative;
-            width: 244px;
-            height: 132px;
+            width: 24.4rem;
+            height: 13.2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -21,22 +21,22 @@
                 left: calc(50% - 10.9rem);
             }
             @media (max-width: 1280px){
-                margin: 0 0px;
+                margin: 0 0;
             }
             @media (max-width: 572px){
-                padding: 0px 9px;
-                width: 144px;
-                height: 76px;
+                padding: 0px 0.9rem;
+                width: 14.4rem;
+                height: 7.6rem;
                 &-img{
-                    width: 130.64px;
+                    width: 13.064rem;
                     left: calc(50% - 65.32px);
                 }
             }
         }
         &-left{
             &__circle{
-                width: 90px;
-                height: 90px;
+                width: 9rem;
+                height: 9rem;
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
@@ -52,8 +52,8 @@
                 }
                 @media (max-width: 572px){
                     font-size: 1.3rem;
-                    width: 54.73px;
-                    height: 54.73px;
+                    width: 5.473rem;
+                    height: 5.473rem;
                 }
             }
             @media (max-width: 1280px) {
@@ -62,8 +62,8 @@
         }
         &-right{
             &__circle{
-                width: 90px;
-                height: 90px;
+                width: 9rem;
+                height: 9rem;
                 border-radius: 50%;
                 display: flex;
                 justify-content: center;
@@ -79,8 +79,8 @@
                 }
                 @media (max-width: 572px){
                     font-size: 1.3rem;
-                    width: 54.73px;
-                    height: 54.73px;
+                    width: 5.473rem;
+                    height: 5.473rem;
                 }
             }
             @media (max-width: 1280px) {
@@ -95,7 +95,7 @@
         justify-content: center;
         align-items: center;
         @media (max-width: 1280px) {
-            height: 100px;
+            height: 10rem;
             order: 1;
             flex-shrink: 0;
             flex-basis: 100%;
@@ -112,7 +112,7 @@
     }
     &__title-line-img{
         width: 100%;
-        max-width: 480px;
-        max-height: 6px;
+        max-width: 48rem;
+        max-height: 0.6rem;
     }
 }
