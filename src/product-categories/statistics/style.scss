@@ -4,6 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 0 2.4rem;
+    margin-top: 13rem;
     &__bubble-section, 
     &__bubble-section{
         &-left, &-right{
@@ -20,8 +21,15 @@
                 z-index: -1;
                 left: calc(50% - 10.9rem);
             }
+            &-curved-text-img{
+                position: absolute;
+                z-index: -2;
+                left: 0;
+
+            }
             @media (max-width: 1280px){
-                margin: 0 0;
+                margin: 0 20px;
+                margin-bottom: 3rem;
             }
             @media (max-width: 572px){
                 padding: 0px 0.9rem;
