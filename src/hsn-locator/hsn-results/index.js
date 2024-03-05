@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import { gradientBorder, searchIcon } from '../../../public/images';
 import constants from '../../utils/constants';
 import useDeviceSize from '../../hooks/use-device-size';
+import RightArrowSvg from '../../commons/right-arrow-svg';
+import ButtonTransparent from '../../commons/buttons/button-transparent';
 
 const HsnResults = () => {
   const { width } = useDeviceSize();
@@ -95,10 +97,42 @@ const HsnResults = () => {
               Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and
               other spices.
             </span>
-            <span className='hsn__result-item'>
-              <button type='button'>View Kundali</button>
-            </span>
+            <button type='button' className='hsn__result-btn'>
+              <span className='hsn__btn-label'>View Kundali</span>
+              <span className='hsn__btn-arrow'>
+                <RightArrowSvg />
+              </span>
+            </button>
           </div>
+          <div className='hsn__result'>
+            <span className='hsn__result-item'>1</span>
+            <span className='hsn__result-item'>0910.30</span>
+            <span className='hsn__result-item'>
+              Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and
+              other spices.
+            </span>
+            <button type='button' className='hsn__result-btn'>
+              <span className='hsn__btn-label'>View Kundali</span>
+              <span className='hsn__btn-arrow'>
+                <RightArrowSvg />
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className='pagination'>
+        <div className='pagination__btn-wrapper'>
+          <ButtonTransparent title='Previous' className='btn btn-prev' />
+          <ButtonTransparent title='Next' className='btn btn-next' />
+        </div>
+        <div className='pagination__count-wrapper'>
+          <span>Page</span>
+          <div className='pagination__current-count'>
+            <input type='text' />
+          </div>
+          <span>
+            of <span className='pagination__total-count'>12</span>
+          </span>
         </div>
       </div>
     </section>
