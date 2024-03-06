@@ -8,6 +8,7 @@ import constants from '../../utils/constants';
 import useDeviceSize from '../../hooks/use-device-size';
 import RightArrowSvg from '../../commons/right-arrow-svg';
 import ButtonTransparent from '../../commons/buttons/button-transparent';
+import ButtonArrowFilled from '../../commons/buttons/button-arrow-filled';
 
 const HsnResults = () => {
   const { width } = useDeviceSize();
@@ -82,47 +83,86 @@ const HsnResults = () => {
           className='hsn__search-icon'
         />
       </div>
-      <div className='hsn__results-container'>
-        <div className='hsn__results-header-wrapper'>
-          <span className='hsn__results-header'>Sr. No.</span>
-          <span className='hsn__results-header'>HSN Number</span>
-          <span className='hsn__results-header'>Description</span>
-          <span className='hsn__results-header'>Actions</span>
-        </div>
-        <div className='hsn__results-wrapper'>
-          <div className='hsn__result'>
-            <span className='hsn__result-item'>1</span>
-            <span className='hsn__result-item'>0910.30</span>
-            <span className='hsn__result-item'>
-              Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and
-              other spices.
-            </span>
-            <button type='button' className='hsn__result-btn'>
-              <span className='hsn__btn-label'>View Kundali</span>
-              <span className='hsn__btn-arrow'>
-                <RightArrowSvg />
+      {width > 768 ? (
+        <div className='hsn__results-container'>
+          <div className='hsn__results-header-wrapper'>
+            <span className='hsn__results-header'>Sr. No.</span>
+            <span className='hsn__results-header'>HSN Number</span>
+            <span className='hsn__results-header'>Description</span>
+            <span className='hsn__results-header'>Actions</span>
+          </div>
+          <div className='hsn__results-wrapper'>
+            <div className='hsn__result'>
+              <span className='hsn__result-item'>1</span>
+              <span className='hsn__result-item'>0910.30</span>
+              <span className='hsn__result-item'>
+                Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry
+                and other spices.
               </span>
-            </button>
+              <button type='button' className='hsn__result-btn'>
+                <span className='hsn__btn-label'>View Kundali</span>
+                <span className='hsn__btn-arrow'>
+                  <RightArrowSvg />
+                </span>
+              </button>
+            </div>
+            <div className='hsn__result'>
+              <span className='hsn__result-item'>1</span>
+              <span className='hsn__result-item'>0910.30</span>
+              <span className='hsn__result-item'>
+                Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry
+                and other spices.
+              </span>
+              <button type='button' className='hsn__result-btn'>
+                <span className='hsn__btn-label'>View Kundali</span>
+                <span className='hsn__btn-arrow'>
+                  <RightArrowSvg />
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className='hsn__results-container'>
+          <div className='hsn__result'>
+            <div className='hsn__number-flex'>
+              <div>
+                <div className='hsn__results-header'>HSN Number</div>
+                <div className='hsn__result-item'>0910.30</div>
+              </div>
+              <span className='hsn__result-item'>1</span>
+            </div>
+            <div className='hsn__result-desc'>
+              <div className='hsn__results-header'>Description</div>
+              <div className='hsn__result-item'>
+                Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry
+                and other spices.
+              </div>
+            </div>
+            <ButtonArrowFilled title='View Kundali' />
           </div>
           <div className='hsn__result'>
-            <span className='hsn__result-item'>1</span>
-            <span className='hsn__result-item'>0910.30</span>
-            <span className='hsn__result-item'>
-              Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and
-              other spices.
-            </span>
-            <button type='button' className='hsn__result-btn'>
-              <span className='hsn__btn-label'>View Kundali</span>
-              <span className='hsn__btn-arrow'>
-                <RightArrowSvg />
-              </span>
-            </button>
+            <div className='hsn__number-flex'>
+              <div>
+                <div className='hsn__results-header'>HSN Number</div>
+                <div className='hsn__result-item'>0910.30</div>
+              </div>
+              <span className='hsn__result-item'>1</span>
+            </div>
+            <div className='hsn__result-desc'>
+              <div className='hsn__results-header'>Description</div>
+              <div className='hsn__result-item'>
+                Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry
+                and other spices.
+              </div>
+            </div>
+            <ButtonArrowFilled title='View Kundali' />
           </div>
         </div>
-      </div>
+      )}
       <div className='pagination'>
         <div className='pagination__btn-wrapper'>
-          <ButtonTransparent title='Previous' className='btn btn-prev' />
+          <ButtonTransparent title='Prev' className='btn btn-prev' />
           <ButtonTransparent title='Next' className='btn btn-next' />
         </div>
         <div className='pagination__count-wrapper'>
