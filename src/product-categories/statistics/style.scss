@@ -1,13 +1,16 @@
-.statistics{
+.statistics {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 2.4rem;
     margin-top: 13rem;
-    &__bubble-section, 
-    &__bubble-section{
-        &-left, &-right{
+
+    &__bubble-section,
+    &__bubble-section {
+
+        &-left,
+        &-right {
             margin: 0 5.4rem;
             padding: 0px 1.8rem;
             position: relative;
@@ -16,33 +19,39 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            &-img{
+
+            &-img {
                 position: absolute;
                 z-index: -1;
                 left: calc(50% - 10.9rem);
             }
-            &-curved-text-img{
+
+            &-curved-text-img {
                 position: absolute;
                 z-index: -2;
                 left: 0;
 
             }
-            @media (max-width: 1280px){
+
+            @media (max-width: 1280px) {
                 margin: 0 20px;
                 margin-bottom: 3rem;
             }
-            @media (max-width: 572px){
+
+            @media (max-width: 572px) {
                 padding: 0px 0.9rem;
                 width: 14.4rem;
                 height: 7.6rem;
-                &-img{
+
+                &-img {
                     width: 13.064rem;
                     left: calc(50% - 65.32px);
                 }
             }
         }
-        &-left{
-            &__circle{
+
+        &-left {
+            &__circle {
                 width: 9rem;
                 height: 9rem;
                 border-radius: 50%;
@@ -51,25 +60,30 @@
                 align-items: center;
                 font-family: 'Lufga700';
                 font-size: 2.4rem;
-                &:nth-child(3){
+
+                &:nth-child(3) {
                     color: #FF9736;
                     background-color: #FFEAD7;
                 }
-                &:nth-child(2){
-                    background-color: #E1E2EF;
+
+                &:nth-child(2) {
+                    background-color: var(--c-E1E2EF);
                 }
-                @media (max-width: 572px){
+
+                @media (max-width: 572px) {
                     font-size: 1.3rem;
                     width: 5.473rem;
                     height: 5.473rem;
                 }
             }
+
             @media (max-width: 1280px) {
                 order: 2;
             }
         }
-        &-right{
-            &__circle{
+
+        &-right {
+            &__circle {
                 width: 9rem;
                 height: 9rem;
                 border-radius: 50%;
@@ -78,30 +92,36 @@
                 align-items: center;
                 font-family: 'Lufga700';
                 font-size: 2.4rem;
-                &:nth-child(3){
-                    background-color: #E1E2EF;
+
+                &:nth-child(3) {
+                    background-color: var(--c-E1E2EF);
                 }
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     color: #FF9736;
                     background-color: #FFEAD7;
                 }
-                @media (max-width: 572px){
+
+                @media (max-width: 572px) {
                     font-size: 1.3rem;
                     width: 5.473rem;
                     height: 5.473rem;
                 }
             }
+
             @media (max-width: 1280px) {
                 order: 3;
             }
         }
-        
+
     }
-    &__title{
+
+    &__title {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+
         @media (max-width: 1280px) {
             height: 10rem;
             order: 1;
@@ -109,7 +129,8 @@
             flex-basis: 100%;
         }
     }
-    &__title-text{
+
+    &__title-text {
         position: absolute;
         top: calc(50% - 3.7rem);
         font-size: 5rem;
@@ -118,7 +139,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-    &__title-line-img{
+
+    &__title-line-img {
         width: 100%;
         max-width: 48rem;
         max-height: 0.6rem;
