@@ -1,0 +1,73 @@
+.banner {
+  margin-top: 10rem;
+  margin-bottom: 13.3rem;
+  .section-label {
+    margin-bottom: 4rem;
+  }
+  &__group {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20rem;
+  }
+  &__kundali-word {
+    position: relative;
+    display: block;
+    img {
+      position: absolute;
+      top: -1.7rem;
+      left: -1.5rem;
+    }
+  }
+  .section-description {
+    margin-bottom: 4rem;
+  }
+  .btn-arrow--filled {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .banner {
+    &__group {
+      gap: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .banner {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    &__group {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .section-label {
+      margin-bottom: 2.4rem;
+    }
+    .section-description {
+      margin-top: 2.4rem;
+    }
+    .section-heading60 {
+      font-size: 3.8rem;
+    }
+    &__kundali-word {
+      img {
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 180px;
+        height: 64px;
+        object-fit: contain;
+      }
+    }
+    .btn-arrow--filled {
+      width: 100%;
+    }
+  }
+}
