@@ -1,81 +1,82 @@
 .category-item {
-    background-color: #EEE8FA;
-    margin-bottom: 1.8rem;
-    border-radius: 3.2rem;
+  background-color: #eee8fa;
+  margin-bottom: 1.8rem;
+  border-radius: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__id {
+    height: 100%;
+    background-color: var(--c-FFFFFF);
+    min-width: 16rem;
+    min-height: 6rem;
+    display: inline-block;
+    border-radius: 2.4rem;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding: 1rem;
+    font-size: 1.8rem;
+    font-family: 'Lufga700';
+    color: var(--c-5313CA);
 
     @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
+      padding-left: 2.4rem;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    margin-left: 3rem;
+    font-family: 'Lufga500';
+    font-size: 1.8rem;
+    margin-right: 23rem;
+
+    @media (max-width: 768px) {
+      margin: 2.4rem 1.6rem;
+    }
+  }
+
+  &__button {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 100rem;
+    border: 2px solid var(--c-000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    background-color: var(--c-00000);
+
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+
+    svg {
+      transform: rotate(-45deg);
     }
 
-    &__id {
-        height: 100%;
-        background-color: var(--c-FFFFFF);
-        min-width: 16rem;
-        min-height: 6rem;
-        display: inline-block;
-        border-radius: 2.4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.8rem;
-        font-family: 'Lufga700';
-        color: var(--c-5313CA);
+    svg path {
+      transition: color 0.3s;
 
-        @media (max-width: 768px) {
-            padding-left: 2.4rem;
-            justify-content: flex-start;
-            width: 100%;
-        }
+      stroke: var(--c-050729);
     }
 
-    &__description {
-        margin-left: 3rem;
-        font-family: 'Lufga500';
-        font-size: 1.8rem;
-        margin-right: 23rem;
+    &:hover {
+      background-color: var(--c-050729);
 
-        @media (max-width: 768px) {
-            margin: 2.4rem 1.6rem;
-        }
+      svg path {
+        stroke: var(--c-FFFFFF);
+      }
     }
-
-    &__button {
-        width: 4.8rem;
-        height: 4.8rem;
-        border-radius: 100rem;
-        border: 2px solid var(--c-000000);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s;
-        background-color: var(--c-00000);
-
-        position: absolute;
-        right: 1.6rem;
-        top: 1.6rem;
-
-        svg {
-            transform: rotate(-45deg);
-        }
-
-        svg path {
-            transition: color 0.3s;
-
-            stroke: var(--c-050729);
-        }
-
-        &:hover {
-            background-color: var(--c-050729);
-
-            svg path {
-                stroke: var(--c-FFFFFF);
-            }
-        }
-    }
+  }
 }
+

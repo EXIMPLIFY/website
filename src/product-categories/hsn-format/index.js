@@ -8,7 +8,7 @@ const HSNFormat = () => {
       <div className='hsn-format'>
         <p className='hsn-format__floating-left'>HSN</p>
         <div className='hsn-format__structure'>
-          <div className='hsn-format__structure-bg-line'></div>
+          <div className='hsn-format__structure-bg-line' />
           <div className='hsn-format__structure-description'>
             <div className='hsn-format__structure-description__code-container'>
               <span>1</span>

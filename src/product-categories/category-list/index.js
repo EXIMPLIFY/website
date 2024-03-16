@@ -1,6 +1,7 @@
-import './style.scss'
+import './style.scss';
 import SectionLabel from '../../commons/section-label';
 import CategoryItem from './category-item';
+
 const categories = [
   {
     badgeLabel: 'Section 1',
@@ -97,25 +98,35 @@ const categories = [
 const CategoryList = () => {
   return (
     <main className='category-list'>
-      {categories && categories.map((category, index) => {
-        return (
-          <>
-            <SectionLabel title={category.badgeLabel} className='bg-05072933' />
-            <h1 className='category-list__section-title'>{category.sectionTitle}</h1>
+      {categories &&
+        categories.map((category, index) => {
+          return (
+            <>
+              <SectionLabel
+                title={category.badgeLabel}
+                className='bg-05072933'
+              />
+              <h1 className='category-list__section-title'>
+                {category.sectionTitle}
+              </h1>
 
-            {category.itemList && category.itemList.map(item => {
-                return (
+              {category.itemList &&
+                category.itemList.map(item => {
+                  return (
                     <CategoryItem
-                     id={item.chapterId}
-                     idLabel={item.chapterLabel}
-                     description={item.chapterDescription} />
-                )
-            })}
-            {(index != categories.length -1) && <hr className='category-list__separator' />}
-            
-          </>
-        );
-      })}
+                      key={item.chapterId}
+                      id={item.chapterId}
+                      idLabel={item.chapterLabel}
+                      description={item.chapterDescription}
+                    />
+                  );
+                })}
+              {index !== categories.length - 1 && (
+                <hr className='category-list__separator' />
+              )}
+            </>
+          );
+        })}
     </main>
   );
 };

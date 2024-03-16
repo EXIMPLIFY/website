@@ -1,6 +1,6 @@
 import './style.scss';
-import letterShine from '../../../public/images/product-categories/letter-shine.png';
 import Image from 'next/image';
+import letterShine from '../../../public/images/product-categories/letter-shine.png';
 import SectionLabel from '../../commons/section-label';
 
 const About = () => {

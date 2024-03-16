@@ -4,7 +4,7 @@ import RightArrowSvg from '../../../commons/right-arrow-svg';
 
 const CategoryItem = ({ id, idLabel, description }) => {
   return (
-    <div className='category-item'>
+    <div className='category-item' id={id}>
       <div className='category-item__id'>{idLabel}</div>
       <p className='category-item__description'>{description}</p>
       <div>
