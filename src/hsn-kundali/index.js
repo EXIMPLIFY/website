@@ -1,11 +1,18 @@
 import './style.scss';
 import Image from 'next/image';
 import SectionLabel from '../commons/section-label';
-import { aboutHeading, kundaliEllipse } from '../../public/images';
+import {
+  aboutHeading,
+  kundaliEllipse,
+  whiteCurve,
+  whiteCurveMobile
+} from '../../public/images';
 import ButtonArrowFilled from '../commons/buttons/button-arrow-filled';
 import RightArrowSvg from '../commons/right-arrow-svg';
+import useDeviceSize from '../hooks/use-device-size';
 
 const HsnKundali = () => {
+  const { width } = useDeviceSize();
   return (
     <main>
       <section className='banner'>
@@ -35,13 +42,13 @@ const HsnKundali = () => {
         </div>
       </section>
       <section className='aboutkundali'>
-        {/* <Image
-          src={aboutBg}
-          width={1280}
-          height={320}
-          alt='about hsn backgeound'
-          className='aboutkundali__bg'
-        /> */}
+        <Image
+          src={width > 834 ? whiteCurve : whiteCurveMobile}
+          width={width > 834 ? 384 : 250}
+          height={width > 834 ? 140 : 60}
+          alt='about hsn white curve'
+          className='aboutkundali__white-curve'
+        />
         <div className='aboutkundali__group'>
           <div className='aboutkundali__group-left'>
             <h5>About</h5>

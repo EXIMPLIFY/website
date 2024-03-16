@@ -36,7 +36,7 @@
   background-color: var(--c-5313CA);
   border-radius: 6rem;
   margin-bottom: 13.8rem;
-  //   position: relative;
+  position: relative;
   //   background-image: url(../../public/images/hsn-kundali/about-bg.png);
   //   background-repeat: no-repeat;
   //   background-size: contain;
@@ -50,6 +50,11 @@
   //     height: 100%;
   //     z-index: -1;
   //   }
+  &__white-curve {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+  }
   &__group {
     display: grid;
     grid-template-columns: 70% auto;
@@ -69,6 +74,7 @@
   &__more-info-btn {
     display: flex;
     align-items: center;
+    position: relative;
     span {
       font-size: 1.8rem;
       font-family: 'Lufga700';
@@ -79,6 +85,7 @@
       transform: rotate(45deg);
       width: 1.8rem;
       height: 1.8rem;
+      margin-left: 2px;
     }
   }
   &__group-right {
@@ -106,7 +113,6 @@
     }
   }
   .aboutkundali {
-    padding-left: 4rem;
     padding-right: 4rem;
   }
 }
