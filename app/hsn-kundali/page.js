@@ -1,3 +1,5 @@
+'use client';
+
 import HsnKundali from '../../src/hsn-kundali';
 
 const HsnKundaliPage = () => {
