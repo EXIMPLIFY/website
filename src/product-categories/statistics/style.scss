@@ -6,7 +6,6 @@
   padding: 0 2.4rem;
   margin-top: 13rem;
 
-  &__bubble-section,
   &__bubble-section {
     &-left,
     &-right {
@@ -30,22 +29,6 @@
         z-index: -2;
         left: 0;
       }
-
-      @media (max-width: 1280px) {
-        margin: 0 20px;
-        margin-bottom: 3rem;
-      }
-
-      @media (max-width: 572px) {
-        padding: 0px 0.9rem;
-        width: 14.4rem;
-        height: 7.6rem;
-
-        &-img {
-          width: 13.064rem;
-          left: calc(50% - 65.32px);
-        }
-      }
     }
 
     &-left {
@@ -67,16 +50,6 @@
         &:nth-child(2) {
           background-color: var(--c-E1E2EF);
         }
-
-        @media (max-width: 572px) {
-          font-size: 1.3rem;
-          width: 5.473rem;
-          height: 5.473rem;
-        }
-      }
-
-      @media (max-width: 1280px) {
-        order: 2;
       }
     }
 
@@ -99,16 +72,6 @@
           color: #ff9736;
           background-color: #ffead7;
         }
-
-        @media (max-width: 572px) {
-          font-size: 1.3rem;
-          width: 5.473rem;
-          height: 5.473rem;
-        }
-      }
-
-      @media (max-width: 1280px) {
-        order: 3;
       }
     }
   }
@@ -118,13 +81,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 1280px) {
-      height: 10rem;
-      order: 1;
-      flex-shrink: 0;
-      flex-basis: 100%;
-    }
   }
 
   &__title-text {
@@ -147,3 +103,53 @@
     max-height: 0.6rem;
   }
 }
+
+@media (max-width: 1280px) {
+  .statistics {
+    &__bubble-section {
+      &-left,
+      &-right {
+        margin: 0 20px;
+        margin-bottom: 3rem;
+      }
+      &-left {
+        order: 2;
+      }
+      &-right {
+        order: 3;
+      }
+    }
+  }
+  &__title {
+    height: 10rem;
+    order: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 572px) {
+  .statistics {
+    &__bubble-section {
+      &-left,
+      &-right {
+        padding: 0px 0.9rem;
+        width: 14.4rem;
+        height: 7.6rem;
+        &-img {
+          width: 13.064rem;
+          left: calc(50% - 65.32px);
+        }
+      }
+      &-left,
+      &-right {
+        &__circle {
+          font-size: 1.3rem;
+          width: 5.473rem;
+          height: 5.473rem;
+        }
+      }
+    }
+  }
+}
+

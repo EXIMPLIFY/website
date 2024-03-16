@@ -25,26 +25,12 @@
       font-weight: 700;
       font-family: 'Lufga700';
       color: var(--c-FFFFFF);
-
-      @media (max-width: 768px) {
-        width: 6.9rem;
-        font-size: 1.6rem;
-      }
     }
 
     &-arrow {
       display: flex;
       align-items: center;
       padding: 0 2.4rem;
-
-      @media (max-width: 768px) {
-        padding: 0 0.8rem;
-
-        img {
-          width: 2.4rem;
-          height: auto;
-        }
-      }
     }
 
     &-circle {
@@ -58,18 +44,33 @@
       margin-right: 0.6rem;
       font-family: 'Lufga500';
       font-size: 1.8rem;
+    }
+  }
+}
 
-      @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .builder {
+    &__container {
+      width: 32.7rem;
+      height: 44px;
+      &-label {
+        width: 6.9rem;
+        font-size: 1.6rem;
+      }
+      &-arrow {
+        padding: 0 0.8rem;
+
+        img {
+          width: 2.4rem;
+          height: auto;
+        }
+      }
+      &-circle {
         width: 3.2rem;
         height: 3.2rem;
         font-size: 1.4rem;
         margin-right: 0.4rem;
       }
-    }
-
-    @media (max-width: 768px) {
-      width: 32.7rem;
-      height: 44px;
     }
   }
 }

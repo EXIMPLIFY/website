@@ -22,10 +22,6 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    @media (max-width: 834px) {
-      display: none;
-    }
   }
 
   &__floating-right {
@@ -43,10 +39,6 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    @media (max-width: 834px) {
-      display: none;
-    }
   }
 
   &__structure {
@@ -56,26 +48,6 @@
     width: 70rem;
     margin: auto;
 
-    @media (max-width: 764px) {
-      width: 60rem;
-    }
-
-    @media (max-width: 640px) {
-      width: 50rem;
-    }
-
-    @media (max-width: 572px) {
-      width: 45rem;
-    }
-
-    @media (max-width: 500px) {
-      width: 40rem;
-    }
-
-    @media (max-width: 440px) {
-      width: 35rem;
-    }
-
     &-bg-line {
       position: absolute;
       z-index: -1;
@@ -83,28 +55,6 @@
       width: 70rem;
       height: 7.6rem;
       border-radius: 9.1rem;
-
-      @media (max-width: 764px) {
-        width: 60rem;
-      }
-
-      @media (max-width: 640px) {
-        width: 50rem;
-        height: 6rem;
-      }
-
-      @media (max-width: 572px) {
-        width: 45rem;
-      }
-
-      @media (max-width: 500px) {
-        width: 40rem;
-      }
-
-      @media (max-width: 440px) {
-        width: 35rem;
-        height: 5rem;
-      }
     }
 
     &-description {
@@ -117,28 +67,12 @@
       background-size: 0.1rem 1.8rem;
       background-repeat: repeat-y;
 
-      @media (max-width: 500px) {
-        width: 10rem;
-      }
-
-      @media (max-width: 440px) {
-        width: 8.5rem;
-      }
-
       &__code-container {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         height: 7.6rem;
         padding: 0.4rem;
-
-        @media (max-width: 640px) {
-          height: 6rem;
-        }
-
-        @media (max-width: 440px) {
-          height: 5rem;
-        }
 
         span {
           margin: 0.4rem;
@@ -152,22 +86,6 @@
           font-family: Lufga;
           font-size: 1.8rem;
           font-family: 'Lufga500';
-
-          @media (max-width: 640px) {
-            width: 4rem;
-            height: 4rem;
-          }
-
-          @media (max-width: 500px) {
-            width: 3.5rem;
-            height: 3.5rem;
-          }
-
-          @media (max-width: 440px) {
-            width: 3rem;
-            height: 3rem;
-            font-size: 1.4rem;
-          }
         }
       }
 
@@ -183,10 +101,6 @@
           font-family: 'Lufga700';
           font-size: 1.8rem;
           color: var(--c-5313CA);
-
-          @media (max-width: 500px) {
-            font-size: 1.4rem;
-          }
         }
       }
 
@@ -219,6 +133,106 @@
 
         .hsn-format__structure-description__arrow-img {
           top: 14.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .hsn-format {
+    &__floating-left,
+    &__floating-right {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 764px) {
+  .hsn-format {
+    &__structure {
+      width: 60rem;
+      &-bg-line {
+        width: 60rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hsn-format {
+    &__structure {
+      width: 50rem;
+      &-bg-line {
+        width: 50rem;
+        height: 6rem;
+      }
+      &-description {
+        &__code-container {
+          height: 6rem;
+          span {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 572px) {
+  .hsn-format {
+    &__structure {
+      width: 45rem;
+      &-bg-line {
+        width: 45rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hsn-format {
+    &__structure {
+      width: 40rem;
+      &-bg-line {
+        width: 40rem;
+      }
+      &-description {
+        width: 10rem;
+        &__code-container {
+          span {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+        &__arrow-img {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .hsn-format {
+    &__structure {
+      width: 35rem;
+      &-bg-line {
+        width: 35rem;
+        height: 5rem;
+      }
+      &-description {
+        width: 8.5rem;
+        &__code-container {
+          height: 5rem;
+          span {
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.4rem;
+          }
         }
       }
     }
