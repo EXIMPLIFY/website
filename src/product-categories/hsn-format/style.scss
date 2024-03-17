@@ -1,0 +1,241 @@
+.hsn-format {
+  margin-top: 17.9rem;
+  margin-bottom: 16.2rem;
+  text-align: center;
+  position: relative;
+
+  &__img {
+    max-width: 70rem;
+    width: 94%;
+  }
+
+  &__floating-left {
+    position: absolute;
+    bottom: 1.1rem;
+    font-family: 'Lufga700';
+    font-size: 6rem;
+    letter-spacing: 0.08em;
+    background: linear-gradient(
+      180deg,
+      #5313ca -251.92%,
+      rgba(83, 19, 202, 0) 74.36%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__floating-right {
+    position: absolute;
+    right: -0.5rem;
+    writing-mode: vertical-rl;
+    font-family: 'Lufga700';
+    font-size: 6rem;
+    letter-spacing: 0.08em;
+    transform: rotate(-180deg) translateY(calc(100% + 15rem));
+    background: linear-gradient(
+      -90deg,
+      #5313ca -251.92%,
+      rgba(83, 19, 202, 0) 74.36%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__structure {
+    display: flex;
+    justify-content: center;
+    height: 33.6rem;
+    width: 70rem;
+    margin: auto;
+
+    &-bg-line {
+      position: absolute;
+      z-index: -1;
+      background-color: var(--c-E1E2EF);
+      width: 70rem;
+      height: 7.6rem;
+      border-radius: 9.1rem;
+    }
+
+    &-description {
+      width: 18.6rem;
+      background-image: linear-gradient(
+        #5313ca66 70%,
+        rgba(255, 255, 255, 0) 0%
+      );
+      background-position: right;
+      background-size: 0.1rem 1.8rem;
+      background-repeat: repeat-y;
+
+      &__code-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 7.6rem;
+        padding: 0.4rem;
+
+        span {
+          margin: 0.4rem;
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          background-color: #0507293d;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Lufga;
+          font-size: 1.8rem;
+          font-family: 'Lufga500';
+        }
+      }
+
+      &__arrow-img {
+        position: relative;
+        top: 2.4rem;
+        width: 103%;
+        max-width: unset;
+
+        p {
+          text-align: left;
+          padding: 2rem;
+          font-family: 'Lufga700';
+          font-size: 1.8rem;
+          color: var(--c-5313CA);
+        }
+      }
+
+      &:nth-of-type(4n + 1) {
+        background: none;
+
+        .hsn-format__structure-description__code-container {
+          justify-content: flex-end;
+        }
+
+        .hsn-format__structure-description__arrow-img {
+          top: 20.4rem;
+        }
+      }
+
+      &:nth-of-type(4n + 3) {
+        .hsn-format__structure-description__code-container {
+          justify-content: center;
+        }
+
+        .hsn-format__structure-description__arrow-img {
+          top: 8.4rem;
+        }
+      }
+
+      &:nth-of-type(4n + 4) {
+        .hsn-format__structure-description__code-container {
+          justify-content: center;
+        }
+
+        .hsn-format__structure-description__arrow-img {
+          top: 14.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .hsn-format {
+    &__floating-left,
+    &__floating-right {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 764px) {
+  .hsn-format {
+    &__structure {
+      width: 60rem;
+      &-bg-line {
+        width: 60rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hsn-format {
+    &__structure {
+      width: 50rem;
+      &-bg-line {
+        width: 50rem;
+        height: 6rem;
+      }
+      &-description {
+        &__code-container {
+          height: 6rem;
+          span {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 572px) {
+  .hsn-format {
+    &__structure {
+      width: 45rem;
+      &-bg-line {
+        width: 45rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hsn-format {
+    &__structure {
+      width: 40rem;
+      &-bg-line {
+        width: 40rem;
+      }
+      &-description {
+        width: 10rem;
+        &__code-container {
+          span {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+        &__arrow-img {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .hsn-format {
+    &__structure {
+      width: 35rem;
+      &-bg-line {
+        width: 35rem;
+        height: 5rem;
+      }
+      &-description {
+        width: 8.5rem;
+        &__code-container {
+          height: 5rem;
+          span {
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+

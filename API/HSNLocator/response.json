@@ -1,0 +1,38 @@
+{
+    "headings":[
+        "Sr. No.",
+        "HSN Code",
+        "Description",
+        "Actions"
+    ],
+    "searchResults":[
+        {
+            "id": "1",
+            "hsnNumber": "0910.30",
+            "description": "Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and other spices.",
+            "actionLabel": "View Kundali",
+            "actionUrl": "View Kundali URL"
+        },
+        {
+            "id": "2",
+            "hsnNumber": "0910.30",
+            "description": "Turmeric (curcuma)",
+            "actionLabel": "View Kundali",
+            "actionUrl": "View Kundali URL"
+        },
+        {
+            "id": "3",
+            "hsnNumber": "0910.30",
+            "description": "Fixed vegetables oils, namely the cardamom oil, chillies or capsicum oil, turmeric oil, ajwain seed oil, niger seed oil, garlic  oil",
+            "actionLabel": "View Kundali",
+            "actionUrl": "View Kundali URL"
+        },
+        {
+            "id": "3",
+            "hsnNumber": "0910.30",
+            "description": "Ginger, saffron, turmeric (curcuma), thyme, bay leaves, curry and other spices.",
+            "actionLabel": "View Kundali",
+            "actionUrl": "View Kundali URL"
+        }
+    ]
+}
