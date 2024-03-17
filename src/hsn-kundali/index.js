@@ -10,11 +10,12 @@ import {
 import ButtonArrowFilled from '../commons/buttons/button-arrow-filled';
 import RightArrowSvg from '../commons/right-arrow-svg';
 import useDeviceSize from '../hooks/use-device-size';
+import InfoTable from './info-table';
 
 const HsnKundali = () => {
   const { width } = useDeviceSize();
   return (
-    <main>
+    <>
       <section className='banner'>
         <div className='banner__group'>
           <div className='banner__group-left'>
@@ -75,7 +76,8 @@ const HsnKundali = () => {
           </div>
         </div>
       </section>
-    </main>
+      <InfoTable />
+    </>
   );
 };
 

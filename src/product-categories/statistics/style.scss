@@ -119,12 +119,12 @@
         order: 3;
       }
     }
-  }
-  &__title {
-    height: 10rem;
-    order: 1;
-    flex-shrink: 0;
-    flex-basis: 100%;
+    &__title {
+      height: 10rem;
+      order: 1;
+      flex-shrink: 0;
+      flex-basis: 100%;
+    }
   }
 }
 
@@ -152,4 +152,3 @@
     }
   }
 }
-

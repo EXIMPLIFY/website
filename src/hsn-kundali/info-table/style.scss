@@ -1,0 +1,128 @@
+.infotable {
+  margin-bottom: 12.2rem;
+  &__wrapper {
+    border-radius: 6rem;
+    background-color: var(--c-F4F4F4);
+    padding: 3.2rem 8px 8px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  &__heading-wrapper {
+    display: grid;
+    grid-template-columns: 22% 39% 39%;
+  }
+  &__heading {
+    padding-left: 44%;
+    font-size: 1.8rem;
+    font-family: 'Lufga700';
+    position: relative;
+    &.information {
+      padding-left: 30%;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 2.4rem;
+      background-color: var(--c-050729);
+      right: 0;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__values-wrapper {
+    padding: 8px 2.4rem;
+    border-radius: 5.2rem;
+    background-color: var(--c-FFFFFF);
+    margin-top: 3.2rem;
+  }
+  &__values-grid {
+    display: grid;
+    grid-template-columns: 22% 39% 39%;
+    padding-bottom: 3.2rem;
+    margin-top: 3.2rem;
+    border-bottom: 1px solid rgba(255, 151, 54, 0.2);
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__value {
+    padding-left: 44%;
+    font-size: 1.6rem;
+    font-family: 'Lufga500';
+    color: var(--c-5313CA);
+    .percentage {
+      color: var(--c-5313CA);
+    }
+    .blur {
+      filter: blur(3px);
+    }
+    &:last-child {
+      padding-left: 47%;
+    }
+  }
+  &__value.information {
+    padding-left: 21%;
+    color: var(--c-050729);
+  }
+  &__info-circle-wrapper {
+    position: relative;
+    display: inline;
+  }
+  &__info-circle {
+    vertical-align: middle;
+    margin-left: 1.4rem;
+  }
+  &__info-desc {
+    position: absolute;
+    font-size: 1.2rem;
+    font-family: 'Lufga500';
+    color: rgba(5, 7, 41, 0.64);
+    padding: 1.8rem 2.4rem;
+    border-radius: 2.4rem;
+    background-color: var(--c-EEE8FA);
+    width: 21.6rem;
+    top: -1.7rem;
+    left: 5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+  &__info-circle:hover + &__info-desc {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .infotable {
+    &__wrapper {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .infotable {
+    overflow-x: auto;
+    margin-bottom: 6rem;
+    padding-bottom: 4rem;
+    &__wrapper {
+      width: 73.2rem;
+    }
+    &__heading-wrapper {
+      grid-template-columns: 33% 33% 33%;
+    }
+    &__values-grid {
+      grid-template-columns: 33% 33% 33%;
+    }
+    &__value:last-child &__info-desc {
+      left: -22rem;
+    }
+  }
+}

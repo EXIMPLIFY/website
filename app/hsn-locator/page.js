@@ -2,9 +2,9 @@ import HsnLocator from '../../src/hsn-locator';
 
 const HsnLocatorPage = () => {
   return (
-    <div className='my-container'>
+    <main className='my-container'>
       <HsnLocator />
-    </div>
+    </main>
   );
 };
 

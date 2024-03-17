@@ -4,9 +4,9 @@ import HsnKundali from '../../src/hsn-kundali';
 
 const HsnKundaliPage = () => {
   return (
-    <div className='my-container'>
+    <main className='my-container'>
       <HsnKundali />
-    </div>
+    </main>
   );
 };
 

@@ -8,3 +8,4 @@ export { default as kundaliEllipse } from './hsn-kundali/kundali-ellipse.svg';
 export { default as aboutHeading } from './hsn-kundali/about-heading.png';
 export { default as whiteCurve } from './hsn-kundali/white-curve.svg';
 export { default as whiteCurveMobile } from './hsn-kundali/white-curve-mobile.svg';
+export { default as infoCircle } from './hsn-kundali/info-circle.svg';
