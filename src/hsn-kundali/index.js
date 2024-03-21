@@ -11,6 +11,7 @@ import ButtonArrowFilled from '../commons/buttons/button-arrow-filled';
 import RightArrowSvg from '../commons/right-arrow-svg';
 import useDeviceSize from '../hooks/use-device-size';
 import InfoTable from './info-table';
+import AdditionalInfo from './additional-info';
 
 const HsnKundali = () => {
   const { width } = useDeviceSize();
@@ -77,6 +78,7 @@ const HsnKundali = () => {
         </div>
       </section>
       <InfoTable />
+      <AdditionalInfo />
     </>
   );
 };
