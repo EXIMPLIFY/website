@@ -25,3 +25,10 @@
     width: 100%;
   }
 }
+
+@media (max-width: 330px) {
+  .btn--transparent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

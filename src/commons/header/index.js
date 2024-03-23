@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import ButtonTransparent from '../buttons/button-transparent';
 import useDeviceSize from '../../hooks/use-device-size';
+import { disableScroll, enableScroll } from '../../utils/utilites';
 
 const Header = () => {
   const pathname = usePathname();
@@ -15,9 +16,10 @@ const Header = () => {
 
   useEffect(() => {
     if (isNavActive) {
-      document.body.style.overflow = 'hidden';
+      disableScroll();
       window.scrollTo(0, 0);
     } else {
+      enableScroll();
       document.body.style.overflow = 'auto';
     }
   }, [isNavActive]);

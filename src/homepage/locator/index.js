@@ -2,10 +2,13 @@ import './style.scss';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import SectionLabel from '../../commons/section-label';
-import searchIcon from '../../../public/images/common/search-icon.svg';
 import constants from '../../utils/constants';
+import { searchIcon } from '../../../public/images';
+import useDeviceSize from '../../hooks/use-device-size';
 
 const Locator = () => {
+  const { width } = useDeviceSize();
+
   const { HSN_LOCATOR, PRODUCTS } = constants;
   const [selectedId, setSelectedId] = useState(HSN_LOCATOR);
   const [offsetLeft, setOffsetLeft] = useState(0);
@@ -22,7 +25,7 @@ const Locator = () => {
   };
   useEffect(() => {
     setOffsetLeft(document.getElementById(selectedId)?.offsetLeft);
-  }, []);
+  }, [width]);
 
   return (
     <section className='locator'>

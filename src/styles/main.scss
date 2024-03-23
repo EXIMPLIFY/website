@@ -47,7 +47,7 @@ button {
 .my-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 128rem;
+  max-width: 126rem;
   @media (max-width: 1280px) {
     padding-left: 1.8rem;
     padding-right: 1.8rem;
@@ -85,4 +85,16 @@ button {
   @media (max-width: 640px) {
     font-size: 3.8rem;
   }
+}
+
+.show-content {
+  transition: all 0.6s;
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.hide-content {
+  transition: all 0.3s;
+  max-height: 0;
+  overflow-y: hidden;
 }
