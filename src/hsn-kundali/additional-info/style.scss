@@ -1,4 +1,121 @@
 .additionalInfo {
   margin-left: 4rem;
   margin-right: 4rem;
+  margin-bottom: 18rem;
+  &__accordion-panel {
+    margin-top: 4rem;
+  }
+  &__accordion-item {
+    padding-left: 3.3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-top: 2px solid var(--c-050729);
+    display: flex;
+    cursor: pointer;
+    &:last-child {
+      border-bottom: 2px solid var(--c-050729);
+    }
+  }
+  &__accordion-item-content-wrapper {
+    flex-grow: 1;
+  }
+  &__item-no {
+    font-family: 'Lufga700';
+    color: var(--c-5313CA);
+    font-size: 1.8rem;
+    transform: translateX(-148%);
+    display: inline-block;
+  }
+  &__item-heading {
+    font-family: 'Lufga700';
+    color: var(--c-050729);
+    font-size: 3.2rem;
+    transition: color 0.3s;
+    &.active {
+      color: var(--c-955CFF);
+    }
+  }
+  .section-description {
+    margin-top: 1.8rem;
+    margin-bottom: 4rem;
+    span {
+      filter: blur(4px);
+    }
+  }
+  &__item-btn {
+    min-width: 6rem;
+    height: 6rem;
+    color: var(--c-5313CA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--c-050729);
+    border-radius: 50%;
+    font-size: 3rem;
+    transition: all 0.3s;
+    font-family: initial;
+    &.active {
+      background-color: var(--c-050729);
+      transform: rotate(45deg);
+      color: var(--c-FFFFFF);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .additionalInfo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .additionalInfo {
+    &__item-no {
+      font-size: 1.6rem;
+      margin-left: 2.5rem;
+    }
+    &__item-heading {
+      font-size: 2.4rem;
+      padding-left: 2.5rem;
+    }
+    .section-description {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      margin-bottom: 0;
+    }
+    &__accordion-item {
+      flex-direction: column;
+      padding-left: 0;
+    }
+    &__item-btn {
+      width: 6rem;
+      margin-left: 2.5rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: left 0.3s;
+      transition-delay: 0.3s;
+      &.active {
+        left: calc(100% - 8rem);
+      }
+    }
+    &__mb-btn-wrapper {
+      margin-top: 2.4rem;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+    }
+    .hide-btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .show-btn {
+      opacity: 1;
+      margin-right: 7rem;
+      transition: opacity 0.3s;
+      transition-delay: 0.3s;
+      pointer-events: auto;
+    }
+  }
 }
