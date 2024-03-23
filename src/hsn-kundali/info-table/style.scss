@@ -91,6 +91,11 @@
     opacity: 0;
     transition: opacity 0.3s;
     z-index: -1;
+    img {
+      left: -12px;
+      top: 16px;
+      position: absolute;
+    }
   }
   &__info-circle:hover + &__info-desc {
     opacity: 1;
@@ -102,6 +107,11 @@
   .infotable {
     &__value:last-child &__info-desc {
       left: -22rem;
+      img {
+        left: initial;
+        right: -12px;
+        transform: rotate(180deg);
+      }
     }
   }
 }
