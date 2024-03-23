@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { infoCircle } from '../../../public/images';
+import { infoCircle, popupArrow } from '../../../public/images';
 import './style.scss';
 
 const InfoTable = () => {
@@ -27,6 +27,12 @@ const InfoTable = () => {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry, Lorem Ipsum is simply dummy text of the
                   printing.
+                  <Image
+                    src={popupArrow}
+                    width={14}
+                    height={15}
+                    alt='Pop up arrow'
+                  />
                 </p>
               </div>
             </span>
@@ -51,6 +57,12 @@ const InfoTable = () => {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry, Lorem Ipsum is simply dummy text of the
                   printing.
+                  <Image
+                    src={popupArrow}
+                    width={14}
+                    height={15}
+                    alt='Pop up arrow'
+                  />
                 </p>
               </div>
             </span>
@@ -68,6 +80,12 @@ const InfoTable = () => {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry, Lorem Ipsum is simply dummy text of the
                   printing.
+                  <Image
+                    src={popupArrow}
+                    width={14}
+                    height={15}
+                    alt='Pop up arrow'
+                  />
                 </p>
               </div>
             </span>

@@ -91,6 +91,11 @@
     opacity: 0;
     transition: opacity 0.3s;
     z-index: -1;
+    img {
+      left: -12px;
+      top: 16px;
+      position: absolute;
+    }
   }
   &__info-circle:hover + &__info-desc {
     opacity: 1;
@@ -98,6 +103,18 @@
   }
 }
 
+@media (max-width: 1194px) {
+  .infotable {
+    &__value:last-child &__info-desc {
+      left: -22rem;
+      img {
+        left: initial;
+        right: -12px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
 @media (max-width: 1024px) {
   .infotable {
     &__wrapper {
@@ -120,9 +137,6 @@
     }
     &__values-grid {
       grid-template-columns: 33% 33% 33%;
-    }
-    &__value:last-child &__info-desc {
-      left: -22rem;
     }
   }
 }
